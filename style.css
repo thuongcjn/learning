@@ -22,18 +22,20 @@ ul li {
 }
 ul li a {
     text-decoration: none;
+    color: #555;
 }
 header {
     
     display: flex;
-    width: 100%;
     height: auto;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 9rem;
+    padding: 0 10rem 0 10rem;
 }
 .navbar-container {
     display: flex;
-    padding: 4rem 4rem;
+    padding: 4rem 0rem;
 }
 
 .navbar-container  li {
@@ -47,6 +49,7 @@ header {
     height: auto;
     /* margin: 1rem; */
     position: absolute;
+    z-index: 1;
 }
 .dropdown-content > li {
     margin: 0;
@@ -78,15 +81,16 @@ header {
     
     
 }
-.dropdown:hover {
+.dropdown:hover .dropdown li{
     border-bottom: 1px solid black;
+    color: yellow;
 }
 
 .content--img-container {
     width: 100%;
     height: auto;
     display: flex;
-    gap: 2rem;
+    gap: 20rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -112,10 +116,11 @@ header {
     font-size: 1.4rem;
     font-weight: 500;
 }
-.option:hover {
+.option.featured {
     color: #D6987E;
     transition: 0.3s linear;
-    border-bottom: 1px solid #D6987E;
+    text-decoration: underline 1px #D6987E;
+    text-underline-offset: 10px;
 }
 
 .product-container {
@@ -127,7 +132,9 @@ header {
     font-weight: 500;
     color: #D6987E;
     text-decoration: underline 1px #D6987E;
+    text-underline-offset: 10px;
 }
+
 .product-des {
     font-size: 1.8rem;
     font-weight: 500;
@@ -144,11 +151,11 @@ header {
 
 .btn-add{
     width: auto;
-    padding: 1.5rem 8rem;
+    padding: 1.5rem 4rem;
     border: none;
     border-radius: 30px;
     color: #D6987E;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .btn-add:hover{
@@ -157,14 +164,14 @@ header {
     transition: 0.3s linear;
 }
 .product-card img{
-    width: 80%;
+    width: 90%;
     height: auto;
 }
 .product-card{
     display: flex;
     justify-content: space-around;
-    padding: 0 10rem;
-    flex-wrap: wrap;
+    padding: 0 25rem;
+    flex-wrap: nowrap;
 }
 .form{
     display: flex;
@@ -181,6 +188,9 @@ textarea{
     background-color: #f3dcd3;
     border: none;
     margin: 0 0 2rem 0;
+    text-align: center;
+   
+
 }
 #text-mess{
     height: 20rem;
@@ -206,17 +216,45 @@ textarea{
     padding: 4rem 0;
     background-color: #f3dcd3;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: start;
+}
+.footer-column{
+    width: 20rem;
 }
 .column-header{
     font-size: 1.6rem;
     font-weight: 400;
     color: #E8764D;
-    border-bottom: 1px solid red;
+    text-decoration: 1px underline #D6987E;
+    text-underline-offset: 10px;
     line-height: 0.1rem;
 }
 .column-content{
     font-size: 1.3rem;
     
+}
+.dots-overlay{
+    position: absolute;
+    left: 46%;
+    z-index: 1;
+    bottom: 15px;
+}
+.main-img{
+    position: relative;
+}
+.dots-overlay{
+    display: flex;
+}
+.dot {
+  width: 15px; 
+  height: 15px; 
+  background-color: white; 
+  border-radius: 50%; 
+  border: 1px solid #a9a9a9; 
+  margin: 0 5px;
+
+}
+.dot.active {
+  background-color: #555; /* Màu xám đậm */
 }
