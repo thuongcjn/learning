@@ -196,7 +196,21 @@ header {
 
 }
 
-
+@media screen and (min-width: 1440px) and (max-width: 1820px){
+    .product-card img{
+    width: 100%;
+    height: auto;
+}
+.product-card{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 19rem;
+    flex-wrap: nowrap;
+}
+.product-container {
+    padding: 0 2rem;
+}
+}
 
 
 
