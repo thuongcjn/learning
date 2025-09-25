@@ -39,7 +39,7 @@
     display: none;
    }
    .navbar-container-mobile{
-    padding: 0;
+    padding: 0 10px;
     margin: 1.7rem 0;
     width: 90%;
     /* hover -> display = block */
@@ -48,11 +48,11 @@
     background-color: #222222;
     color: #FFF;
     z-index: 1;
-    left: 2rem;
+    left: 2.1rem;
 
    }
    .navbar-container-mobile  li a {
-    color: #FFF;
+    color: #FAFAFA;
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
    }
@@ -65,7 +65,7 @@
 
    .navbar-container-mobile li {
     padding: 0.7rem;
-    border-bottom: 0.1px solid white;
+    border-bottom: 0.0001px solid #443737;
    }
    .navbar-container-mobile .fa-solid.fa-angle-down{
     float: right;
@@ -114,7 +114,7 @@
     width: 100% ;
     margin-top: 5rem;
     padding: 4rem 2rem;
-    background-color: #f3dcd3;
+    background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -127,7 +127,7 @@
     
     .product-name{
     font-size: 1.4rem;
-    font-weight: 500;
+    font-weight: 700;
     color: #D6987E;
     text-decoration: underline 1px #D6987E;
     text-underline-offset: 10px;
@@ -145,8 +145,18 @@
 }
 
 
+@media screen and (min-width: 321px) and (max-width: 375px){
+        .navbar-container-mobile{
+            left: 1.9rem;
+        }
+}
 
 
+@media screen and (min-width: 0px) and (max-width: 320px){
+        .navbar-container-mobile{
+            left: 1.6rem;
+        }
+}
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .navbar-container  li {
     margin: 0 1rem;
