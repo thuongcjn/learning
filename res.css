@@ -29,7 +29,8 @@
     color: #FFF;
    }
    .text-mn{
-        margin-left:-16rem ;
+        position: absolute;
+        left: 6rem;
    }
    .content--img-container{
     padding: 0 1.8rem;
@@ -47,11 +48,13 @@
     background-color: #222222;
     color: #FFF;
     z-index: 1;
-    left: 1.8rem;
+    left: 2rem;
 
    }
    .navbar-container-mobile  li a {
     color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
    }
    .dropdown:hover .dropdown-content{
     display: none; 
@@ -62,7 +65,7 @@
 
    .navbar-container-mobile li {
     padding: 0.7rem;
-    border-bottom: 1px solid white;
+    border-bottom: 0.1px solid white;
    }
    .navbar-container-mobile .fa-solid.fa-angle-down{
     float: right;
@@ -78,7 +81,7 @@
     padding:0.6rem 0;
     }
     .product-card{
-        padding: 0 1rem;
+        padding: 0 0.5rem;
     }
     .product-container{
         width: 50%;
