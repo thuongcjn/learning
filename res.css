@@ -28,6 +28,9 @@
     padding: 1rem 2rem;
     color: #FFF;
    }
+   .text-mn{
+        margin-left:-16rem ;
+   }
    .content--img-container{
     padding: 0 1.8rem;
    }
@@ -41,7 +44,7 @@
     /* hover -> display = block */
     display: none;
     position: absolute;
-    background-color: #3b1915;
+    background-color: #222222;
     color: #FFF;
     z-index: 1;
     left: 1.8rem;
@@ -58,7 +61,7 @@
    }
 
    .navbar-container-mobile li {
-    padding: 0.5rem;
+    padding: 0.7rem;
     border-bottom: 1px solid white;
    }
    .navbar-container-mobile .fa-solid.fa-angle-down{
