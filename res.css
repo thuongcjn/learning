@@ -78,7 +78,7 @@
 
    }
    .product-options .option{
-    padding:0.6rem 0;
+    padding: 1rem 0;
     }
     .product-card{
         padding: 0 0.5rem;
@@ -99,7 +99,7 @@
     padding: 1.2rem 1.5rem;
     border: none;
     border-radius: 30px;
-    color: #D6987E;
+    color: #cfcfcf;
     font-weight: 800;
     }
     input{
@@ -119,8 +119,12 @@
     flex-direction: column;
     align-items: start;
 }   .footer-column{
-    padding: 2rem 0;
+    padding: 0.5rem 0;
 }
+
+ .footer-column p{
+    padding: 1rem 0 ;
+ }
 .column-header{
     padding: 2rem 0;
 }

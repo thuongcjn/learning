@@ -147,12 +147,12 @@ header {
 .price {
     font-size: 1.4rem;
     margin: 1rem 0 2rem 0;
-    color: #a8a8a8;
+    color: #dd9fa5;
     font-weight: 600;
 }
 .old-price{
     text-decoration: line-through;
-    color: #bbadad;
+    color: #f5f5f5;
 }
 
 .btn-add{
@@ -160,7 +160,7 @@ header {
     padding: 1.5rem 4rem;
     border: none;
     border-radius: 30px;
-    color:  #ababab;
+    color:  #cfcfcf;
     font-weight: 800;
   
     background-color:#ededed ;
@@ -243,7 +243,7 @@ textarea{
     font-size: 1.6rem;
     font-weight: 400;
     color: #928a81;
-    text-decoration: 1px underline #D6987E;
+    text-decoration: 1px underline #d6cbc2;
     text-underline-offset: 10px;
     line-height: 0.1rem;
 }
