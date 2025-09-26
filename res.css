@@ -150,7 +150,11 @@
             left: 1.9rem;
         }
 }
-
+@media screen and (min-width: 426px) and (max-width: 768px){
+        .main-img{
+            width: 80%;
+        }
+}
 
 @media screen and (min-width: 0px) and (max-width: 320px){
         .navbar-container-mobile{
@@ -162,6 +166,10 @@
     margin: 0 1rem;
     font-size: 1.4rem;
 }
+
+    header{
+        justify-content: space-between;
+    }
      .text-box{
         width: 100%;
 
