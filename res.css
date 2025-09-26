@@ -100,7 +100,7 @@
     border: none;
     border-radius: 30px;
     color: #D6987E;
-    font-weight: 600;
+    font-weight: 800;
     }
     input{
         width: 100%;
@@ -153,6 +153,12 @@
         .navbar-container-mobile{
             left: 1.9rem;
         }
+}
+@media screen and (min-width: 1226px) and (max-width: 1440px){
+        
+.content--img-container{
+    gap: 1rem;
+}
 }
 @media screen and (min-width: 426px) and (max-width: 768px){
         .main-img{
