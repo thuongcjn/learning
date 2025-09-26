@@ -152,6 +152,7 @@ header {
 }
 .old-price{
     text-decoration: line-through;
+    color: #e9ccbf;
 }
 
 .btn-add{
