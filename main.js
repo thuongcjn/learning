@@ -8,7 +8,7 @@ btnMenu.addEventListener('click',e=>{
 let fetchdata = JSON.parse(localStorage.getItem("formElements"))
 
 
-if(fetchdata.length == 0){
+if(fetchdata===null|| fetchdata.length == 0){
   btnSend.classList.add("none")
 }
 
