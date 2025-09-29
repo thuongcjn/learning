@@ -63,6 +63,11 @@ let modalContainer = document.getElementById("modalContainer");
         reorder();
       });
 
+      modal.querySelector(".x").addEventListener("click", (e) => {
+        let targetEl =e.target.parentElement.parentElement
+        removeModal(targetEl)
+      });
+
           
     }
 
@@ -144,7 +149,7 @@ let modalContainer = document.getElementById("modalContainer");
       });
       elements = saved;
     };
-
+// delete
     function removeModal(modalElement) {
     
     modalElement.remove();
@@ -152,14 +157,15 @@ let modalContainer = document.getElementById("modalContainer");
 }
 
 
-modalContainer.addEventListener("click", e => {
+// modalContainer.addEventListener("click", e => {
     
-    if (e.target.classList.contains("x")) {
+//     if (e.target.classList.contains("x")) {
         
-        const modalToRemove = e.target.closest(".modal");
-        
-        if (modalToRemove) {
-            removeModal(modalToRemove);
-        }
-    }
-});
+//         const modalToRemove = e.target.closest(".modal");
+
+//         if (modalToRemove) {
+//             removeModal(modalToRemove);
+//         }
+//     }
+// });
+

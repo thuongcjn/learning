@@ -9,7 +9,7 @@ btnMenu.addEventListener('click',e=>{
 
 let data = JSON.parse(localStorage.getItem("formElements") || "[]");
     let form = document.querySelector(".form");
-
+    let btnv = document.querySelector(".btn-send")
     data.forEach(el => {
       let div = document.createElement("div");
       div.className = "form-group";
@@ -38,5 +38,5 @@ let data = JSON.parse(localStorage.getItem("formElements") || "[]");
         div.appendChild(textarea);
       }
 
-      form.appendChild(div);
+      form.insertBefore(div,btnv);
     });
