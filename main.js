@@ -5,11 +5,15 @@ btnMenu.addEventListener('click',e=>{
     menuMobile.classList.toggle('display');
 })
 
-
+var btnSend = document.querySelector('.btn-send')
+if(!localStorage.getItem("formElements")){
+  btnSend.classList.add("none"  )
+}
 
 let data = JSON.parse(localStorage.getItem("formElements") || "[]");
     let form = document.querySelector(".form");
     let btnv = document.querySelector(".btn-send")
+    
     data.forEach(el => {
       let div = document.createElement("div");
       div.className = "form-group";

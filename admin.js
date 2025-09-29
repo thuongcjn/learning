@@ -54,6 +54,17 @@ let modalContainer = document.getElementById("modalContainer");
         modal.querySelector(".required").checked = config.required || false;
       }
 
+      
+      if(type === "input"){
+        modal.querySelector(".type").addEventListener('change',e=>{
+        
+        let stringif = modal.querySelector(".type").value
+        modal.querySelector(".placeholder").value = ` hãy nhập ${stringif} `
+      })
+      }else{
+        modal.querySelector(".placeholder").value = "input message"
+      }
+
       // drag & drop
       modal.addEventListener("dragstart", () => {
         modal.classList.add("dragging");
@@ -66,6 +77,7 @@ let modalContainer = document.getElementById("modalContainer");
       modal.querySelector(".x").addEventListener("click", (e) => {
         let targetEl =e.target.parentElement.parentElement
         removeModal(targetEl)
+        
       });
 
           
@@ -126,10 +138,20 @@ let modalContainer = document.getElementById("modalContainer");
     document.querySelector(".add-textarea").onclick = () => createModal("textarea");
 
     // save
+     
+
+
     document.querySelector(".save").onclick = () => {
+      if (!validateModals()) {
+        // Nếu validateModals trả về false, dừng hàm và không lưu
+        return; 
+    } 
       reorder();
       localStorage.setItem("formElements", JSON.stringify(elements));
       alert("Đã lưu thành công!");
+      
+
+      
     };
 
     //  reset
@@ -169,3 +191,48 @@ let modalContainer = document.getElementById("modalContainer");
 //     }
 // });
 
+
+const nameIdRegex = /^[a-zA-Z0-9][a-zA-Z0-9_-]{3,}$/;
+
+function validateModals() {
+    let isValid = true;
+    const modals = document.querySelectorAll(".modal");
+
+    modals.forEach((m, index) => {
+        const labelInput = m.querySelector(".label");
+        const nameInput = m.querySelector(".name");
+        const idInput = m.querySelector(".id");
+
+        if (!labelInput.value.trim()) {
+            alert(`Lỗi tại phần tử ${index + 1}: Trường Label không được để trống.`);
+            isValid = false;
+            return; 
+        }
+        if (!nameInput.value.trim()) {
+            alert(`Lỗi tại phần tử ${index + 1}: Trường Name không được để trống.`);
+            isValid = false;
+            return;
+        }
+        if (!idInput.value.trim()) {
+            alert(`Lỗi tại phần tử ${index + 1}: Trường ID không được để trống.`);
+            isValid = false;
+            return;
+        }
+
+        
+        if (!nameIdRegex.test(nameInput.value.trim())) {
+            alert(`Lỗi tại phần tử ${index + 1}: Trường Name "${nameInput.value}" không hợp lệ. Vui lòng sử dụng chữ cái, số, gạch dưới, gạch ngang và không bắt đầu bằng số.`);
+            isValid = false;
+            return;
+        }
+        if (!nameIdRegex.test(idInput.value.trim())) {
+            alert(`Lỗi tại phần tử ${index + 1}: Trường ID "${idInput.value}" không hợp lệ. Vui lòng sử dụng chữ cái, số, gạch dưới, gạch ngang và không bắt đầu bằng số.`);
+            isValid = false;
+            return;
+        }
+        
+       
+    });
+
+    return isValid;
+}

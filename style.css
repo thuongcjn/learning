@@ -328,3 +328,7 @@ textarea{
 .form-group input{
 
 }
+
+.none{
+    display: none;
+}
