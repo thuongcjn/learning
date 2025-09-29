@@ -1,12 +1,14 @@
 var btnMenu = document.querySelector('.fa-solid.fa-bars')
 var menuMobile = document.querySelector(".navbar-container-mobile")
-console.log(btnMenu)
+var btnSend = document.querySelector('.btn-send')
+
 btnMenu.addEventListener('click',e=>{
     menuMobile.classList.toggle('display');
 })
+let fetchdata = JSON.parse(localStorage.getItem("formElements"))
 
-var btnSend = document.querySelector('.btn-send')
-if(!localStorage.getItem("formElements")){
+
+if(fetchdata.length == 0){
   btnSend.classList.add("none")
 }
 
