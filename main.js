@@ -7,7 +7,7 @@ btnMenu.addEventListener('click',e=>{
 
 var btnSend = document.querySelector('.btn-send')
 if(!localStorage.getItem("formElements")){
-  btnSend.classList.add("none"  )
+  btnSend.classList.add("none")
 }
 
 let data = JSON.parse(localStorage.getItem("formElements") || "[]");
