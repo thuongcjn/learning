@@ -1,0 +1,73 @@
+.control{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: auto;
+}
+
+.control button{
+    height: 50px;
+    color: #fff;
+    background-color: #277ae7;
+    border: none;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+
+.label-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.label-ip{
+    margin-left: 14px;
+    font-weight: 900;
+}
+.container{
+    display: flex;
+    width: 100%;
+    gap: 50px;
+}
+#modalContainer{
+    width: 750px;
+}
+.modal{
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+    width: 100%;
+    margin: 10px;
+}
+.modal label {
+    padding: 13px;
+    display: flex;
+    gap: 30px;
+}
+.modal input {
+    width: 600px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.modal span {
+    width: 80px;
+}
+.modal select {
+    width: 608px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.modal .required{
+    width: 20px;
+   
+}
+
+.modal .x{
+    width: 30px;
+}
+.modal .label-area{
+    width: 100px;
+    margin-left: 14px;
+    font-weight: 900;
+}

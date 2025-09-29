@@ -147,6 +147,13 @@
 .product-card{
     flex-wrap: wrap;
 }
+
+.form-group textarea{
+   
+    width: 100%;
+    border-radius: 30px 30px 0 30px;
+    resize: both;
+}
 }
 @media screen and (min-width: 2560px) {
         .product-card{
@@ -169,6 +176,11 @@
         .main-img{
             width: 80%;
         }
+        .form-group textarea{
+        border-radius: 30px 30px 0 30px;
+    resize: both;
+    width: 100%;
+}
 }
 
 @media screen and (min-width: 0px) and (max-width: 320px){
