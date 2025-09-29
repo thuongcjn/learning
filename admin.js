@@ -138,7 +138,7 @@ let modalContainer = document.getElementById("modalContainer");
         // Nếu validateModals trả về false, dừng hàm và không lưu
        
         return; 
-    } 
+      } 
 
      
       reorder();
@@ -188,7 +188,7 @@ let modalContainer = document.getElementById("modalContainer");
 // });
 
 
-const nameIdRegex = /^[a-zA-Z0-9][a-zA-Z0-9_-]{3,}$/;
+const nameIdRegex = /^[a-zA-Z0-9][a-zA-Z0-9_-]{2,}$/;
 const emailRegex = /^[\w\.-]+@[\w\.-]+\.\w{2,}$/;
 const numberRegex =/^\d+$/;
 
