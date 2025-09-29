@@ -54,7 +54,25 @@ let modalContainer = document.getElementById("modalContainer");
         modal.querySelector(".required").checked = config.required || false;
       }
 
-      
+      if (type === "input") {
+        const typeSelect = modal.querySelector(".type");
+        
+        const placeholderInput = modal.querySelector(".placeholder"); 
+        
+        
+        placeholderInput.type = typeSelect.value;
+        
+        typeSelect.addEventListener("change", (e) => {
+            const newType = e.target.value;
+            
+            
+            placeholderInput.type = newType;
+            
+           
+           // modal.querySelector(".label-ip").textContent = newType.charAt(0).toUpperCase() + newType.slice(1) + " field";
+            
+        });
+    }
      
       // drag & drop
       modal.addEventListener("dragstart", () => {
@@ -208,8 +226,7 @@ function validateModals() {
         if(m.querySelector(".type")){
           var dataselect = m.querySelector(".type")
 
-
-
+          
            if(dataselect.value === "email" && dataselect){
           if(!emailRegex.test(placeholderIp.value.trim())){
             alert('vui long nhap dung dinh dang email')
