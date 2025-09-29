@@ -55,16 +55,7 @@ let modalContainer = document.getElementById("modalContainer");
       }
 
       
-      if(type === "input"){
-        modal.querySelector(".type").addEventListener('change',e=>{
-        
-        let stringif = modal.querySelector(".type").value
-        modal.querySelector(".placeholder").value = ` hãy nhập ${stringif} `
-      })
-      }else{
-        modal.querySelector(".placeholder").value = "input message"
-      }
-
+     
       // drag & drop
       modal.addEventListener("dragstart", () => {
         modal.classList.add("dragging");
@@ -142,10 +133,14 @@ let modalContainer = document.getElementById("modalContainer");
 
 
     document.querySelector(".save").onclick = () => {
+       
       if (!validateModals()) {
         // Nếu validateModals trả về false, dừng hàm và không lưu
+       
         return; 
     } 
+
+     
       reorder();
       localStorage.setItem("formElements", JSON.stringify(elements));
       alert("Đã lưu thành công!");
@@ -170,6 +165,7 @@ let modalContainer = document.getElementById("modalContainer");
         createModal(el.type, el);
       });
       elements = saved;
+      
     };
 // delete
     function removeModal(modalElement) {
@@ -193,6 +189,12 @@ let modalContainer = document.getElementById("modalContainer");
 
 
 const nameIdRegex = /^[a-zA-Z0-9][a-zA-Z0-9_-]{3,}$/;
+const emailRegex = /^[\w\.-]+@[\w\.-]+\.\w{2,}$/;
+const numberRegex =/^\d+$/;
+
+
+
+
 
 function validateModals() {
     let isValid = true;
@@ -202,7 +204,32 @@ function validateModals() {
         const labelInput = m.querySelector(".label");
         const nameInput = m.querySelector(".name");
         const idInput = m.querySelector(".id");
+        const placeholderIp = m.querySelector('.placeholder')
+        if(m.querySelector(".type")){
+          var dataselect = m.querySelector(".type")
 
+
+
+           if(dataselect.value === "email" && dataselect){
+          if(!emailRegex.test(placeholderIp.value.trim())){
+            alert('vui long nhap dung dinh dang email')
+            isValid = false;
+            return;
+          }
+        }
+
+         if(dataselect.value === "number"){
+          if(!numberRegex.test(placeholderIp.value.trim())){
+            alert('vui long nhap dung dinh dang number')
+            isValid = false;
+            return;
+          }
+        }
+       
+
+
+        }
+        const haveInput = m.querySelector(".label-ip")
         if (!labelInput.value.trim()) {
             alert(`Lỗi tại phần tử ${index + 1}: Trường Label không được để trống.`);
             isValid = false;
@@ -218,8 +245,17 @@ function validateModals() {
             isValid = false;
             return;
         }
+          if (!placeholderIp.value.trim()) {
+            alert(`Lỗi: Trường placeholder không được để trống.`);
+            isValid = false;
+            return;
+        }
 
-        
+
+
+       
+
+
         if (!nameIdRegex.test(nameInput.value.trim())) {
             alert(`Lỗi tại phần tử ${index + 1}: Trường Name "${nameInput.value}" không hợp lệ. Vui lòng sử dụng chữ cái, số, gạch dưới, gạch ngang và không bắt đầu bằng số.`);
             isValid = false;
