@@ -262,11 +262,11 @@ function validateModals() {
             isValid = false;
             return;
         }
-          if (!placeholderIp.value.trim()) {
-            alert(`Lỗi: Trường placeholder không được để trống.`);
-            isValid = false;
-            return;
-        }
+        //   if (!placeholderIp.value.trim()) {
+        //     alert(`Lỗi: Trường placeholder không được để trống.`);
+        //     isValid = false;
+        //     return;
+        // }
 
 
 
